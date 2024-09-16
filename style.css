@@ -84,5 +84,16 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.other{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -30px;
+    font-weight: 1000;
+    text-shadow: 0 0 5px #ffd500, 0 0 10px yellow, 0 0 15px #ffe761, 0 0 20px #fff394;
+    text-decoration: none;
+}
+
 
 
