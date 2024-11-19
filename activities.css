@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #101011;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #101011;
+    color: #f5b301;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: .3s;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navbar .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+  ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+  }
+  
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger span {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#menu-toggle:checked ~ nav ul {
+    display: block;
+    position: absolute;
+    background-color: #101011;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: #f5b301;
+}
+
+main {
+    padding: 3rem 2rem;
+    margin-top: 80px; 
+}
+
+.project-showcase {
+    text-align: center;
+}
+
+.project-showcase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f5b301;
+}
+
+.project-showcase p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card p {
+    color: #777;
+    margin: 1rem 0;
+}
+
+.view-project-btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #101011;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background-color: #FFD700;
+    color: #101011;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icons a i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid white;
+    border-radius: 50%;
+    color: white;
+    margin: 5px 16px 5px 0;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.icons a i:hover {
+    color: #f5b301;
+    border: 0.2 rem solid #f5b301;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #menu-toggle:checked ~ nav ul {
+        display: block;
+    }
+
+    .activities {
+        grid-template-columns: 1fr; 
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .view-project-btn {
+        padding: 0.5rem 1rem;
+    }
+}
+

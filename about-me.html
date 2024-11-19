@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="about-me.css" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <div class="banner">
-        <div class="navbar">
-            <h1>My Portfolio</h1>
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Favorites</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Activities</a></li>
-            </ul>   
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="about-me.css" />
+    
+    <title>About Me</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">My Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
         <div class="content">
-            <h1>Welcome To My Portfolio</h1>
-            <p>Hi, I'm Rafael Daniel A. Bisnar. I'm 19 years old BSIT sophomore student at University of the Immaculate Conception. I lived in Buhangin, Davao City and I love my course. <br>Allow me to introduce you to know more about myself.</p>
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Rafael<br />an</span> IT Student
+          </h1>
+          <p class="description">
+            I'm 19 years old BSIT sophomore student at University of the Immaculate Conception. 
+            I lived in Buhangin, Davao City and I love my course.
+            Allow me to introduce you to know more about myself.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Favorites</button>
+            <button class="portfolio">Journey</button>
+          </div>
         </div>
-    </div>
-</body>
-<footer>
-    <div class="icons">
-        <a href="https://www.facebook.com/bisnar.rafael" target="_blank">
-    <i class="fa-brands fa-facebook"></i>
-    </a>
-    <a href="https://www.instagram.com/rafaeldanieel/" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="https://github.com/RafaelBisnar" target="_blank">
-    <i class="fa-brands fa-github"></i>
-    </a>
-    </div>
-</footer>
+        <div class="image">
+          <img src="images/467128564_1079578143802702_8106865955669583019_n.jpg" alt="profile" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
