@@ -62,9 +62,9 @@ ul {
   }
   
   ul li a:hover {
-    border-top-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-top-color: white;
+    border-bottom-color:white;
+    color: white;
   }
 
 .hamburger {
