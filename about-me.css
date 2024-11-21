@@ -22,6 +22,7 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #101011;
 }
 
 nav {
@@ -296,36 +297,4 @@ ul li a:hover {
 }
 html {
   scroll-behavior: smooth;
-}
-
-footer{
-  background-color: #101011;
-  margin-top: -5%;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  color: white;
-}
-
-.icons a i {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  background-color: transparent;
-  border: 0.2rem solid white;
-  border-radius: 50%;
-  color: white;
-  margin: 5px 16px 5px 0;
-  font-size: 1.5rem;
-  transition: 0.2s linear;
-}
-
-.icons a i:hover {
-  color: #f5b301;
-  border: 0.2 rem solid #f5b301;
 }
