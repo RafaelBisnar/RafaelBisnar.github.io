@@ -50,22 +50,22 @@ ul {
     gap: 1rem;
     list-style: none;
     transition: left 0.3s;
-  }
+}
   
-  ul li a {
+ul li a {
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
     font-weight: 600;
     color: var(--text-dark);
     transition: 0.3s;
-  }
+}
   
-  ul li a:hover {
+ul li a:hover {
     border-top-color: white;
     border-bottom-color:white;
     color: white;
-  }
+}
 
 .hamburger {
     display: none;
@@ -234,4 +234,3 @@ main {
         padding: 0.5rem 1rem;
     }
 }
-
