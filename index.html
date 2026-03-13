@@ -3,50 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Rafael Daniel | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/044acbaeb4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="bar">
-            <a href="about-me.html">About Me</a>
-            <a href="#">Favorites</a>
-            <a href="#">Projects</a>
-            <a href="activities.html">Activities</a>
-        </nav>
-
-        <div class="hamburger" id="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <!-- Decorative Background Elements -->
+    <div class="bg-decoration"></div>
+    
+    <main class="main-content">
+        <div class="intro">
+            <p class="greeting">Hi, I'm Rafael!</p>
+            <p class="subtitle">Developer & Designer</p>
+            <a href="https://www.w3schools.com/css/" target="_blank" class="code-icon-link">
+                <span class="other"><i class="fa-solid fa-code"></i></span>
+            </a>
         </div>
-    </header>
-    <div class="container">
-      <img src="images/rafaeldaniel.jpg" alt="Rafael Daniel">
-    </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </main>
 
-    <div class="intro">
-        <p>Hi, I'm Rafael!</p>
-        <a href="https://www.w3schools.com/css/" target="_blank">
-            <p class="other"><i class="fa-solid fa-code"></i></p>
-        </a>
-    </div>
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-layout">
+                <!-- Profile Image Side -->
+                <div class="about-image-wrapper">
+                    <div class="about-image-frame">
+                        <img src="images/rafaeldaniel.jpg" alt="Rafael Daniel" class="about-image">
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div class="about-content">
+                    <p class="about-subtitle">HELLO</p>
+                    <h2 class="about-title">
+                        I'm <span class="highlight-text">Rafael Daniel A. Bisnar</span><br />an IT Student
+                    </h2>
+                    <p class="about-description">
+                        I'm 20 years old BSIT junior student at University of the Immaculate Conception. 
+                        I lived in Buhangin, Davao City and I love my course.
+                        Allow me to introduce you to know more about myself.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>BSIT Junior</p>
+                            <p class="highlight-detail">University of the Immaculate Conception</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Location</h3>
+                            <p>Buhangin, Davao City</p>
+                            <p class="highlight-detail">Philippines</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-heart"></i>
+                            <h3>Passion</h3>
+                            <p>Technology & Development</p>
+                            <p class="highlight-detail">Creating innovative solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites-section">
+        <div class="favorites-container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="highlight-text">Favorites</span></h2>
+                <p class="section-subtitle">Things that inspire and drive me</p>
+            </div>
+            
+            <div class="favorites-grid">
+                <!-- Activities Card -->
+                <div class="favorite-card activities-card">
+                    <div class="favorite-icon">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="favorite-title">Activities</h3>
+                    <p class="favorite-description">
+                        I loved to play video games, I loved also playing sports activity, and most likely I loved to watch movies. 
+                        I'm the person who loves to engage into intense activity or challenges that pushes myself to become a better person.
+                    </p>
+                    <div class="favorite-tags">
+                        <span class="tag"><i class="fa-solid fa-gamepad"></i> Gaming</span>
+                        <span class="tag"><i class="fa-solid fa-basketball"></i> Sports</span>
+                        <span class="tag"><i class="fa-solid fa-film"></i> Movies</span>
+                    </div>
+                </div>
+
+                <!-- Favorite Things Card -->
+                <div class="favorite-card things-card">
+                    <div class="favorite-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="favorite-title">Favorite Things</h3>
+                    <div class="favorite-image-wrapper">
+                        <img src="images/IMAGESBANG.png" alt="Basketball" class="favorite-image">
+                    </div>
+                </div>
+
+                <!-- Favorite Playlist Card -->
+                <div class="favorite-card playlist-card">
+                    <div class="favorite-icon">
+                        <i class="fa-brands fa-spotify"></i>
+                    </div>
+                    <h3 class="favorite-title">Favorite Playlist</h3>
+                    <p class="favorite-description">Music that keeps me motivated and focused</p>
+                    <div class="spotify-wrapper">
+                        <iframe 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/playlist/0JU5Xv2o1DFkeXSj6mn8Bl?utm_source=generator" 
+                            width="100%" 
+                            height="152" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Experiences Section -->
+    <section id="programming" class="programming-section">
+        <div class="programming-container">
+            <div class="section-header">
+                <h2 class="section-title">Programming <span class="highlight-text">Experiences</span></h2>
+                <p class="section-subtitle">Technologies & frameworks I work with</p>
+                <p class="programming-intro">
+                    Throughout my journey as an IT student, I've gained hands-on experience with various programming languages 
+                    and modern frameworks that power today's web applications.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <!-- HTML -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper html-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h3 class="tech-name">HTML5</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- CSS -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper css-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h3 class="tech-name">CSS3</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper js-icon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h3 class="tech-name">JavaScript</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- Node.js -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper node-icon">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <h3 class="tech-name">Node.js</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- SQL Database -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper sql-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="tech-name">SQL Database</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- React -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper react-icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <h3 class="tech-name">React</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- PHP -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper php-icon">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <h3 class="tech-name">PHP</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- Laravel -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper laravel-icon">
+                        <i class="fa-brands fa-laravel"></i>
+                    </div>
+                    <h3 class="tech-name">Laravel</h3>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- Linux -->
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper linux-icon">
+                        <i class="fa-brands fa-linux"></i>
+                    </div>
+                    <h3 class="tech-name">Linux</h3>
+                    <p class="tech-level">SERVER ADMINISTRATION</p>
+                    <br>
+                    <p class="tech-level">Learning</p>
+                </div>
+
+                <!-- MERN Stack - Special Card -->
+                <div class="tech-card mern-card">
+                    <div class="tech-icon-wrapper mern-icon">
+                        <div class="mern-stack">
+                            <span class="mern-letter">M</span>
+                            <span class="mern-letter">E</span>
+                            <span class="mern-letter">R</span>
+                            <span class="mern-letter">N</span>
+                        </div>
+                    </div>
+                    <h3 class="tech-name">MERN Stack</h3>
+                    <p class="tech-level">Learning</p>
+                    <div class="mern-details">
+                        <span class="mern-tech">MongoDB</span>
+                        <span class="mern-tech">Express</span>
+                        <span class="mern-tech">React</span>
+                        <span class="mern-tech">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+        <div class="activities-container">
+            <div class="section-header">
+                <h2 class="section-title">Web Development <span class="highlight-text">Activities</span></h2>
+                <p class="section-subtitle">School projects & learning experiences</p>
+                <p class="activities-intro">
+                    Here are some of the school activities I've worked on throughout my academic journey.
+                    Each project helped me develop practical skills and understanding.
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <!-- Fashion Blog Activity -->
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="activity-title">Fashion Blog</h3>
+                    <p class="activity-description">
+                        Wide range of topics including seasonal fashion guides, beauty tips, 
+                        sustainable fashion, and street style from around the globe.
+                    </p>
+                    <a href="fashionblog.html" target="_blank" class="activity-btn">
+                        <span>View Activity</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Healthy Recipes Activity -->
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h3 class="activity-title">Healthy Recipes</h3>
+                    <p class="activity-description">
+                        Discover delicious and nutritious recipes that make healthy eating 
+                        easy and enjoyable for everyone.
+                    </p>
+                    <a href="healthy-recipes.html" target="_blank" class="activity-btn">
+                        <span>View Activity</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- WoodRuff Portfolio Activity -->
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="activity-title">WoodRuff Portfolio</h3>
+                    <p class="activity-description">
+                        A developer portfolio specializing in HTML and CSS with modern 
+                        design principles and clean layouts.
+                    </p>
+                    <a href="woodruff.html" target="_blank" class="activity-btn">
+                        <span>View Activity</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- API Fetch Activity -->
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                    </div>
+                    <h3 class="activity-title">API Fetch</h3>
+                    <p class="activity-description">
+                        A modern JavaScript interface for making HTTP requests to retrieve 
+                        or send data to a server efficiently.
+                    </p>
+                    <a href="API.html" target="_blank" class="activity-btn">
+                        <span>View Activity</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="icons">
             <a href="https://www.facebook.com/bisnar.rafael" target="_blank">
                 <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/rafaeldanieel/" target="_blank">
+            <a href="https://www.instagram.com/danielrafaeel/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://github.com/RafaelBisnar" target="_blank">
                 <i class="fa-brands fa-github"></i>
             </a>
+            <a href="https://www.linkedin.com/in/rafael-daniel-bisnar-0081993ab" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
         </div>
     </footer>
 
-    <script src="js/homepage.js"></script>
+    <!-- Floating Contact Button -->
+    <div class="floating-contact-btn">
+        <i class="fa-solid fa-envelope"></i>
+    </div>
+
+    <script src="homepage.js"></script>
 </body>
 </html>
