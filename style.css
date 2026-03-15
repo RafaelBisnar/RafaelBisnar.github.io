@@ -47,12 +47,12 @@ body {
 
 .bg-decoration::before,
 .bg-decoration::after {
-    content: '';
+    content: none;
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
-    animation: float 20s infinite ease-in-out;
+    filter: none;
+    opacity: 0;
+    animation: none;
 }
 
 .bg-decoration::before {
@@ -242,7 +242,8 @@ body {
 }
 
 .about-image-frame::before {
-    content: '';\n    position: absolute;
+    content: '' \n;
+    position: absolute;
     top: -15px;
     left: -15px;
     right: -15px;
@@ -1236,6 +1237,19 @@ footer {
     background: transparent;
     text-transform: none;
     border-radius: 10px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.38s ease, transform 0.38s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.greeting.is-leaving {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.greeting.is-entering {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .greeting::before {

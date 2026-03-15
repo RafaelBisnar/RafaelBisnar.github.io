@@ -3,22 +3,32 @@ const navLinks = document.querySelector(".bar");
 const header = document.querySelector(".header");
 
 // Hamburger menu toggle
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("active");
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    });
+}
 
 // Close menu when clicking a link
-document.querySelectorAll('.bar a').forEach(link => {
+document.querySelectorAll('.bar a').forEach((link) => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
+        if (navLinks) {
+            navLinks.classList.remove('active');
+        }
+        if (hamburger) {
+            hamburger.classList.remove('active');
+        }
     });
 });
 
 // Header scroll effect
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
+    if (!header) {
+        return;
+    }
+
     const currentScroll = window.pageYOffset;
     const isMobile = window.innerWidth <= 768;
     const isSmallMobile = window.innerWidth <= 480;
@@ -47,6 +57,45 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+
+    // Multilingual hero greeting animation
+    const greetingEl = document.getElementById('heroGreeting');
+
+    if (greetingEl) {
+        const greetings = [
+            "Hi, I'm Rafael!",            // English
+            'こんにちは、ラファエルです！',     // Japanese
+            '你好，我是 Rafael！',            // Mandarin Chinese
+            '¡Hola, soy Rafael!',         // Spanish
+            'Hi, ako si Rafael!',         // Tagalog
+            'Salut, je suis Rafael !'     // French
+        ];
+
+        const switchInterval = 2000;
+        const fadeTime = 320;
+        let greetingIndex = 0;
+
+        function cycleGreeting() {
+            greetingEl.classList.add('is-leaving');
+
+            window.setTimeout(() => {
+                greetingIndex = (greetingIndex + 1) % greetings.length;
+                greetingEl.textContent = greetings[greetingIndex];
+
+                greetingEl.classList.remove('is-leaving');
+                greetingEl.classList.add('is-entering');
+
+                // Trigger enter transition after DOM paints the starting state.
+                requestAnimationFrame(() => {
+                    greetingEl.classList.remove('is-entering');
+                });
+
+                window.setTimeout(cycleGreeting, switchInterval);
+            }, fadeTime);
+        }
+
+        window.setTimeout(cycleGreeting, switchInterval);
+    }
 
 // Smooth reveal on load
 window.addEventListener('load', () => {

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multilingual Hero Text</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-start: #0b1220;
+      --bg-mid: #0f1b35;
+      --bg-end: #1a2745;
+      --text: #eaf2ff;
+      --glow-main: rgba(116, 184, 255, 0.55);
+      --glow-soft: rgba(116, 184, 255, 0.25);
+      --duration: 420ms;
+      --timing: cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 550px at 10% 10%, rgba(116, 184, 255, 0.15), transparent 55%),
+        radial-gradient(1000px 500px at 90% 80%, rgba(82, 140, 255, 0.14), transparent 60%),
+        linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1100px;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      min-height: 60vh;
+    }
+
+    .hero-title {
+      margin: 0;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 4.25rem);
+      text-wrap: balance;
+
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        opacity var(--duration) var(--timing),
+        transform var(--duration) var(--timing),
+        text-shadow var(--duration) var(--timing);
+
+      text-shadow:
+        0 0 10px var(--glow-soft),
+        0 0 24px var(--glow-main),
+        0 0 46px rgba(116, 184, 255, 0.16);
+    }
+
+    /* Fade out while moving slightly upward */
+    .hero-title.is-leaving {
+      opacity: 0;
+      transform: translateY(-12px);
+      text-shadow:
+        0 0 8px rgba(116, 184, 255, 0.2),
+        0 0 16px rgba(116, 184, 255, 0.12);
+    }
+
+    /* Start next phrase slightly lower, then glide to its resting spot */
+    .hero-title.is-entering {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+
+      .hero {
+        min-height: 52vh;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-title {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero" aria-label="Portfolio Intro">
+    <h1 id="heroText" class="hero-title">Hi, I'm Rafael!</h1>
+  </section>
+
+  <script>
+    const phrases = [
+      "Hi, I'm Rafael!",                 // English
+      "こんにちは、ラファエルです！",      // Japanese
+      "你好，我是 Rafael！",               // Mandarin Chinese
+      "¡Hola, soy Rafael!",              // Spanish
+      "Hi, ako si Rafael!",              // Tagalog
+      "Salut, je suis Rafael !"          // French
+    ];
+
+    const switchInterval = 2000; // Show each language for 2 seconds
+    const fadeTime = 320;        // Time before swapping text while fading out
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const heroText = document.getElementById("heroText");
+
+      if (!heroText) {
+        return;
+      }
+
+      let index = 0;
+
+      // Runs forever: fade out + move up, swap phrase, then fade in from below.
+      function cyclePhrases() {
+        heroText.classList.add("is-leaving");
+
+        window.setTimeout(() => {
+          index = (index + 1) % phrases.length;
+          heroText.textContent = phrases[index];
+
+          heroText.classList.remove("is-leaving");
+          heroText.classList.add("is-entering");
+
+          // Let the browser paint the entering state, then animate to default.
+          requestAnimationFrame(() => {
+            heroText.classList.remove("is-entering");
+          });
+
+          // Schedule the next switch only after this one is fully triggered.
+          window.setTimeout(cyclePhrases, switchInterval);
+        }, fadeTime);
+      }
+
+      window.setTimeout(cyclePhrases, switchInterval);
+    });
+  </script>
+</body>
+</html>
