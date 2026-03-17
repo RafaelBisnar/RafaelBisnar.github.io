@@ -117,3 +117,48 @@ if (scrollIndicator) {
         }
     });
 }
+
+// Contact modal controls
+const contactToggle = document.getElementById('contactToggle');
+const contactModalOverlay = document.getElementById('contactModalOverlay');
+const contactClose = document.getElementById('contactClose');
+
+if (contactToggle && contactModalOverlay) {
+    const openModal = () => {
+        contactModalOverlay.hidden = false;
+        requestAnimationFrame(() => {
+            contactModalOverlay.classList.add('is-open');
+        });
+    };
+
+    const closeModal = () => {
+        contactModalOverlay.classList.remove('is-open');
+        setTimeout(() => {
+            contactModalOverlay.hidden = true;
+        }, 250);
+    };
+
+    contactToggle.addEventListener('click', () => {
+        if (contactModalOverlay.classList.contains('is-open')) {
+            closeModal();
+            return;
+        }
+        openModal();
+    });
+
+    if (contactClose) {
+        contactClose.addEventListener('click', closeModal);
+    }
+
+    contactModalOverlay.addEventListener('click', (event) => {
+        if (event.target === contactModalOverlay) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && contactModalOverlay.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
+}
