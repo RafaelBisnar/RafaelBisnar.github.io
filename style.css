@@ -958,6 +958,51 @@ body {
 .tech-card:nth-child(8) { animation-delay: 0.8s; }
 .tech-card:nth-child(9) { animation-delay: 0.9s; }
 
+/* My Projects Section */
+.projects-section {
+    min-height: 55vh;
+    padding: 100px 50px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(12, 12, 12, 0.85) 100%);
+    position: relative;
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.projects-description {
+    max-width: 850px;
+    margin: 24px auto 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.projects-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-slot {
+    min-height: 220px;
+    border-radius: 18px;
+    border: 1.5px dashed rgba(245, 179, 1, 0.45);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.project-slot:hover {
+    border-color: rgba(255, 215, 0, 0.75);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 28px rgba(245, 179, 1, 0.18);
+    transform: translateY(-4px);
+}
+
 /* ==================== Activities Section ==================== */
 .activities-section {
     position: relative;
@@ -994,7 +1039,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding: 40px 30px;
-    text-align: center;
+    margin: 24px auto 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -1636,6 +1681,18 @@ footer {
         padding: 80px 40px;
     }
 
+    .projects-section {
+        padding: 80px 40px;
+    }
+
+    .projects-description {
+        font-size: 16px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .tech-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 25px;
@@ -1835,6 +1892,20 @@ footer {
 
     .programming-section {
         padding: 60px 30px;
+    }
+
+    .projects-section {
+        min-height: auto;
+        padding: 60px 30px;
+    }
+
+    .projects-description {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .project-slot {
+        min-height: 200px;
     }
 
     .programming-intro {
@@ -2123,6 +2194,25 @@ footer {
 
     .programming-section {
         padding: 50px 20px;
+    }
+
+    .projects-section {
+        padding: 50px 20px;
+    }
+
+    .projects-description {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-slot {
+        min-height: 180px;
+        border-radius: 14px;
     }
 
     .programming-intro {
