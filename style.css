@@ -838,6 +838,21 @@ body {
     box-shadow: 0 0 30px rgba(255, 45, 32, 0.3);
 }
 
+.java-icon {
+    background: rgba(248, 152, 32, 0.1);
+    border-color: rgba(248, 152, 32, 0.3);
+}
+
+.java-icon i {
+    color: #f89820;
+}
+
+.tech-card:hover .java-icon {
+    background: rgba(248, 152, 32, 0.2);
+    border-color: #f89820;
+    box-shadow: 0 0 30px rgba(248, 152, 32, 0.3);
+}
+
 .linux-icon {
     background: rgba(233, 84, 32, 0.1);
     border-color: rgba(233, 84, 32, 0.3);
